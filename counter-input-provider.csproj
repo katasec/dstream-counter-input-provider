@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>CounterInputProvider</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>false</PublishSingleFile> <!-- Disabled for provider compatibility -->
+    <AssemblyName>counter-input-provider</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HCLog.Net" Version="0.0.5" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <!-- Reference DStream SDK from local development -->
+    <ProjectReference Include="../dstream-dotnet-sdk/sdk/Katasec.DStream.SDK.PluginHost/Katasec.DStream.SDK.PluginHost.csproj" />
+  </ItemGroup>
+
+</Project>
