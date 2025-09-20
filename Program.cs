@@ -1,4 +1,5 @@
-using DStream.Providers.CounterInput;
 using Katasec.DStream.SDK.Core;
+using CounterInputProvider;
 
-await StdioProviderHost.RunInputProviderAsync<CounterInputProvider, CounterConfig>();
+// Top-level program entry point
+await StdioProviderHost.RunInputProviderAsync<CounterInputProvider.CounterInputProvider, CounterInputProvider.CounterConfig>();

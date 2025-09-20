@@ -2,10 +2,10 @@ using System.Runtime.CompilerServices;
 using Katasec.DStream.Abstractions;
 using Katasec.DStream.SDK.Core;
 
-namespace DStream.Providers.CounterInput;
+namespace CounterInputProvider;
 
 /// <summary>
-/// Simple Counter Input Provider Example
+/// Counter Input Provider - Core data reading logic
 /// Generates sequential counter data perfect for testing output providers
 /// </summary>
 public sealed class CounterInputProvider : ProviderBase<CounterConfig>, IInputProvider
@@ -28,7 +28,7 @@ public sealed class CounterInputProvider : ProviderBase<CounterConfig>, IInputPr
             var data = new
             {
                 value = count,
-                timestamp = DateTimeOffset.UtcNow.ToString("O")
+                timestamp = DateTimeOffset.UtcNow
             };
             
             var metadata = new Dictionary<string, object?>

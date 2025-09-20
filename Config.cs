@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace DStream.Providers.CounterInput;
+namespace CounterInputProvider;
 
 /// <summary>
 /// Configuration for the Counter Input Provider
